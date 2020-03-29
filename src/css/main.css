@@ -16,6 +16,10 @@ body, html {
   font-family: 'Playfair Display', serif;
 }
 
+body #sidebar .fullnavBtn span {
+  background-color: black !important;
+}
+
 body.home #sidebar .fullnavBtn span {
   background-color: white !important;
 }
@@ -28,6 +32,27 @@ body.home .logo {
   width: 768px;
 }
 
+.post-hero-img {
+  height: 704px;
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.red-decoration {
+  height: 4px;
+  background: $red;
+  width: 190px;
+  display: block;
+  margin-left: 100px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
 .logo {
   width: $size-128;
 }
@@ -37,9 +62,9 @@ body.home .logo {
 }
 
 .homepage-background-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 #sidebar {
@@ -84,26 +109,6 @@ hr.strikethrough {
   width: 50%;
 }
 
-h1 {
-  font-size: $size-128;
-  font-style: italic;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  font-size: $size-18;
-  line-height: $size-32;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-small {
-  font-size: $size-14;
-  text-transform: uppercase;
-}
-
 /* Overlay style */
 .fullnav {
   position: fixed;
@@ -142,6 +147,7 @@ small {
   -webkit-animation-delay: .50s;
           animation-delay: .50s;
 }
+
 .fullnav nav {
   position: relative;
   height: 70%;
@@ -161,9 +167,9 @@ small {
 }
 .fullnav ul li {
   display: block;
-  height: 25%;
+  /* height: 25%;
   height: calc(100% / 4);
-  min-height: 50px;
+  min-height: 50px; */
   position: relative;
   opacity: 0;
 }
@@ -174,8 +180,12 @@ small {
   font-size: $size-128;
   text-transform: uppercase;
   overflow: hidden;
+
+  &:hover {
+    text-decoration: line-through;
+  }
 }
-.fullnav ul li a:hover:after, .fullnav ul li a:focus:after, .fullnav ul li a:active:after {
+/* .fullnav ul li a:hover:after, .fullnav ul li a:focus:after, .fullnav ul li a:active:after {
   width: 100%;
 }
 .fullnav ul li a:after {
@@ -190,7 +200,7 @@ small {
   background: #FFF;
   -webkit-transition: .35s;
   transition: .35s;
-}
+} */
 
 @-webkit-keyframes fadeInRight {
   0% {

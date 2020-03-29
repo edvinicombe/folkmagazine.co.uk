@@ -3,7 +3,16 @@
   {{ partial "head" . }}
 
   {{ partial "sidebar" . }}
-  <body class="{{ if .IsHome }}home{{ else if .IsPage }}single{{ else }}list{{ end }}">
+
+  {{ partial "overlay" . }}
+
+  {{ if .IsHome }}
+    {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+    <body style="background:url('{{ .Params.Image }}')" class="homepage-background-img home">
+    {{ end }}
+  {{ else }}
+  <body>
+  {{ end }}
     <div class="container">
       {{ block "header" . }}{{ partial "nav" . }}{{end}}
 

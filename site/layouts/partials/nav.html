@@ -1,5 +1,13 @@
-<nav class="text-center mt-5 mb-5">
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
+<nav class="d-flex {{ if .IsHome }}justify-content-center{{ else }}justify-content-between align-items-center{{ end }} mt-5 mb-5">
+	{{ if not .IsHome }}
+	<small class="flex-1"><b>Interview | {{ .Params.Interviewnumber }}</b></small>
+	{{ end }}
+
+	<a href="/">
 		<img src="/img/logo.svg" alt="Folk Magazine logo" class="logo"/>
 	</a>
+
+	{{ if not .IsHome }}
+	<small class="flex-1 d-flex justify-content-end"><b><i>5 min read</i></b></small>
+	{{ end }}
 </nav>

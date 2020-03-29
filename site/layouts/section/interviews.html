@@ -1,8 +1,12 @@
 {{ define "main" }}
-  <p>poo</p>
-
-  {{ range .Paginator.Pages }}
-    <p>{{.Title}}</p>
-  {{ end }}
-
+  <div class="row">
+    {{ range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+      <div class="col-lg-4">
+        <a href="{{ .URL }}">
+          <p>{{ .Title }}</p>
+          <p>{{ .Params.interviewnumber }}</p>
+        </a>
+      </div>
+    {{ end }}
+  </div>
 {{ end }}

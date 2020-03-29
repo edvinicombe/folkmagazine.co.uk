@@ -1,3 +1,46 @@
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: $size-128;
+  line-height: $size-128;
+  font-style: italic;
+  font-weight: normal;
+}
+
 h1.post-title {
-  margin-left: -130px;
+  font-size: $size-184;
+  margin-top: -130px;
+  line-height: $size-184;
+}
+
+.description {
+  font-size: $size-24;
+  line-height: $size-40;
+}
+
+.description::first-letter {
+  float: left;
+  font-size: 88px;
+  margin: 0;
+  line-height: 80px;
+  padding-right: 3px;
+}
+
+p {
+  font-size: $size-18;
+  line-height: $size-32;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+small {
+  font-size: $size-14;
+  text-transform: uppercase;
+}
+
+.diamond {
+  color: $red;
 }

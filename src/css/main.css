@@ -18,6 +18,10 @@ body, html {
   font-family: 'Playfair Display', serif;
 }
 
+ul {
+  list-style: none outside none;
+}
+
 .post-hero-img {
   height: 704px;
 
@@ -46,6 +50,31 @@ body, html {
 
 .container {
   max-width: 1440px;
+}
+
+.latest-blog li {
+  transition: 0.2s ease-in-out;
+}
+
+.latest-blog:hover li {
+  transform: translate(40px,0);
+}
+
+.latest-blog li:nth-child(2) {
+  transition-delay: 0.05s;
+}
+
+.latest-blog li:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.latest-blog li:nth-child(4) {
+  transition-delay: 0.15s;
+}
+
+.harpoon {
+  color: white;
+  font-size: $size-40;
 }
 
 .homepage-background-img {

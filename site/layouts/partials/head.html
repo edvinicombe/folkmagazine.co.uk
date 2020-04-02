@@ -1,6 +1,6 @@
 <head>
 
-  <title>{{ .Title }}</title>
+  <title>{{ if .IsHome }}{{ .Title }}{{ else }}Folk Magazine | {{ .Title }}{{ end }}</title>
 
   {{ $stylesheet := .Site.Data.webpack.main }}
   {{ with $stylesheet.css }}

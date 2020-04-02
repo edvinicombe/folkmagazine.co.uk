@@ -2,9 +2,9 @@
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
 
-  {{ partial "sidebar" . }}
-
   {{ partial "overlay" . }}
+
+  {{ partial "sidebar" . }}
 
   {{ if .IsHome }}
     {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
@@ -14,7 +14,9 @@
   <body>
   {{ end }}
     <div class="container">
-      {{ block "header" . }}{{ partial "nav" . }}{{end}}
+      {{ block "header" . }}
+        {{ partial "nav" . }}
+      {{end}}
 
       {{ block "main" . }}
       {{ end }}

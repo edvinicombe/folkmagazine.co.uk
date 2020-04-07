@@ -2,12 +2,12 @@
   position: fixed;
   left: 0;
   bottom: 0;
-  width: $size-56;
+  width: $size-64;
   height: 100%;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
-  padding: $size-24 0 0 $size-24;
+  padding: $size-16 0 0 $size-16;
+  background-color: white;
 }
 
 .rotate90 {
@@ -18,24 +18,16 @@
   transform: rotate(90deg);
   transform-origin: 0 0;
   height: 100px;
-  width: 600px;
+  width: 750px;
   position: absolute;
-  top: 165px;
-  left: 45px;
+  top: 95px;
+  left: 47px;
   display: flex;
   justify-content: space-between;
 }
 
 nav.sidebar .logo {
-  width: $size-64;
-}
-
-nav.home .logo {
-  width: 768px;
-}
-
-nav.other .logo {
-  width: $size-128;
+  width: $size-48;
 }
 
 body .sidebar .fullnavBtn span, body.home .sidebar .fullnavBtn span {
@@ -43,11 +35,11 @@ body .sidebar .fullnavBtn span, body.home .sidebar .fullnavBtn span {
 }
 
 body.home .sidebar .fullnavBtn span {
-  background-color: white !important;
+  background-color: black !important;
 }
 
 body.home .sidebar .rotate90 small {
-  color: white !important;
+  color: black !important;
 }
 
 /* When overlay is open */
@@ -58,4 +50,8 @@ body.home .sidebar .rotate90 small {
 
 .fullnav.open ~ .sidebar .rotate90 small, .fullnav.open ~ .sidebar .fullnavBtn span {
   color: white !important;
+}
+
+.fullnav.open ~ .sidebar {
+  background-color: transparent;
 }

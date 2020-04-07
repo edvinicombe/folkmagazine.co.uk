@@ -3,8 +3,11 @@
     {{ range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
       <div class="col-lg-4">
         <a href="{{ .URL }}">
-          <p>{{ .Title }}</p>
-          <p>{{ .Params.interviewnumber }}</p>
+          <p class="interview-listing-number">{{ .Params.interviewnumber }}</p>
+          <div class="interview-hero-img">
+            <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="w-100" />
+          </div>
+          <h2 class="interview-listing-heading">{{ .Title }}</h2>
         </a>
       </div>
     {{ end }}

@@ -72,7 +72,11 @@ nav.other .logo {
 }
 
 .latest-blog:hover li {
-  transform: scale(1.05);
+  transform: translate(0,-16px);
+}
+
+.latest-blog li:nth-child(3) {
+  transition-delay: 0.05s;
 }
 
 .harpoon {

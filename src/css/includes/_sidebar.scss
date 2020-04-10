@@ -34,22 +34,22 @@ body .sidebar .fullnavBtn span, body.home .sidebar .fullnavBtn span {
   background-color: black;
 }
 
-body.home .sidebar .fullnavBtn span {
-  background-color: black !important;
-}
-
 body.home .sidebar .rotate90 small {
-  color: black !important;
+  color: black;
 }
 
 /* When overlay is open */
 
 .fullnav.open ~ nav.sidebar .logo {
-  fill: white;
+  fill: white !important;
 }
 
-.fullnav.open ~ .sidebar .rotate90 small, .fullnav.open ~ .sidebar .fullnavBtn span {
+.fullnav.open ~ .sidebar .rotate90 small {
   color: white !important;
+}
+
+.fullnav.open ~ .sidebar .fullnavBtn span, .fullnav.open ~ body.home .sidebar .fullnavBtn span {
+  background-color: white !important;
 }
 
 .fullnav.open ~ .sidebar {

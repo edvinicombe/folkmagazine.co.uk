@@ -1,13 +1,10 @@
 {{ define "main" }}
   <div class="row">
     {{ range (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-      <div class="col-lg-4">
+      <div class="col-lg-12 mb-6 interview-listing">
         <a href="{{ .URL }}">
-          <p class="interview-listing-number">{{ .Params.interviewnumber }}</p>
-          <div class="interview-hero-img">
-            <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="w-100" />
-          </div>
-          <h2 class="interview-listing-heading">{{ .Title }}</h2>
+          <h2 class="interview-listing-heading mb-1">{{ .Title }}</h2>
+          <p class="interview-listing-number text-black">Interview {{ .Params.interviewnumber }} &#9670; Published {{ .Date.Format "January 2, 2006" }}</p>
         </a>
       </div>
     {{ end }}

@@ -24,15 +24,20 @@ h3 {
   line-height: $size-48;
 }
 
+h4 {
+  font-size: $size-24;
+}
+
+h5 {
+  font-size: $size-11;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
 h1.post-title {
   font-size: $size-184;
   margin-top: -130px;
   line-height: $size-184;
-}
-
-h2.interview-listing-heading {
-  margin-top: -60px;
-  padding-left: $size-32;
 }
 
 .description {
@@ -67,19 +72,14 @@ small {
   // text-orientation: upright;
 }
 
-p.interview-listing-number {
-  padding-left: $size-32;
-  font-size: $size-40;
-  margin-bottom: -8px;
-  color: $black;
-  z-index: 1000;
-  position: relative;
-}
-
 .diamond {
   color: $red;
 }
 
 .text-red {
   color: $red;
+}
+
+.text-black {
+  color: black;
 }

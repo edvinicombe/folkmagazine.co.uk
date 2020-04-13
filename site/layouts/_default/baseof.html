@@ -2,17 +2,14 @@
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
 
-  {{ partial "overlay" . }}
-
-  {{ partial "sidebar" . }}
-
   {{ if .IsHome }}
     {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
     <body style="background:url('{{ .Params.Image }}')" class="homepage-background-img home">
     {{ end }}
   {{ else }}
-  <body>
+  <body class="other">
   {{ end }}
+
     <div class="container">
       {{ block "header" . }}
         {{ partial "nav" . }}

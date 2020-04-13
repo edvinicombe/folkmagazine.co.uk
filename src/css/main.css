@@ -2,7 +2,6 @@
 @import './includes/colours';
 @import './includes/type';
 @import './includes/links';
-@import './includes/sidebar';
 @import './includes/overlay';
 
 @import './bootstrap/scss/bootstrap';
@@ -22,17 +21,13 @@ ul {
   list-style: none outside none;
 }
 
-.post-hero-img, .interview-hero-img {
+.post-hero-img {
   height: 704px;
 
   > img {
     height: 100%;
     object-fit: cover;
   }
-}
-
-.interview-hero-img {
-  height: 608px;
 }
 
 .red-decoration {
@@ -51,31 +46,34 @@ ul {
   fill: $red;
 }
 
-nav.home .logo {
+body.home .logo {
   width: 768px;
 }
 
-nav.other .logo {
+body.other .logo {
   width: $size-128;
 }
 
+.menu {
+  background-color: white;
+}
 
 .container {
-  max-width: 1440px;
+  max-width: 1600px;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.latest-blog li {
+.latest-blog li, .interview-listing {
   transition: 0.2s ease-in-out;
 }
 
-.latest-blog:hover li {
+.latest-blog:hover li, .interview-listing:hover {
   transform: translate(0,-16px);
 }
 
-.latest-blog li:nth-child(3) {
+.latest-blog li:nth-child(2) {
   transition-delay: 0.05s;
 }
 

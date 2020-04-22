@@ -1,14 +1,27 @@
-<div class="col text-center d-flex flex-column justify-content-end pb-5">
-  {{ range (.Paginator 1).Pages.ByPublishDate.Reverse }}
-    <a href="{{ .URL }}" class="latest-blog">
-      <ul>
-        <li>
-          <h1 class="text-red mt-2 mb-5">{{.Title}}</h1>
-        </li>
-        <li>
-          <h3 class="text-white"><i>{{ .Params.Deck }}</i></h3>
-        </li>
-      </ul>
-    </a>
-  {{ end }}
+<div class="row">
+  <div class="col text-center">
+    {{ range (.Paginator 1).Pages.ByPublishDate.Reverse }}
+      <a href="{{ .URL }}" class="latest-blog">
+        <ul class="m-0">
+          <li>
+            <h1 class="text-red mt-2 mb-5">{{.Title}}</h1>
+          </li>
+          <li>
+            <h3 class="text-white"><i>{{ .Params.Deck }}</i></h3>
+          </li>
+        </ul>
+      </a>
+    {{ end }}
+  </div>
+</div>
+
+<div class="row align-self-end pb-2">
+  <div class="col p-0">
+    <div class="interview-number-container">
+      <small class="heavy"><i>Issue</i></small>
+      {{ range (.Paginator 1).Pages.ByPublishDate.Reverse }}
+      <h3 class="interview-number"><i>{{ .Params.interviewnumber }}</i></h3>
+      {{ end }}
+    </div>
+  </div>
 </div>

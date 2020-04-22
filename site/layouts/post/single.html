@@ -2,16 +2,19 @@
 
 <div class="row">
   <div class="col">
-      <span class="red-decoration"></span>
-      <div class="post-hero-img">
-        <img src="{{ .Params.Image }}" alt="{{ .Title }}" class="w-100" />
+    <span class="red-decoration"></span>
+    <div class="post-hero-image" style="background:url('{{ .Params.Image }}')">
+      <div class="interview-number-container mr-4 mb-4">
+        <small class="heavy"><i>Issue</i></small>
+        <h3 class="interview-number"><i>{{ .Params.interviewnumber }}</i></h3>
       </div>
+    </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-lg-6 offset-lg-1">
-    <h1 class="post-title">{{.Title}}</h1>
+    <h1 class="post-title text-red">{{.Title}}</h1>
   </div>
 </div>
 

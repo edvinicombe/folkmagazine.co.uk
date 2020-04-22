@@ -3,22 +3,23 @@
   {{ partial "head" . }}
 
   {{ if .IsHome }}
-    {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
-    <body style="background:url('{{ .Params.Image }}')" class="homepage-background-img home">
-    {{ end }}
-  {{ else }}
-  <body class="other">
+     {{ range first 1 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+     <body style="background:url('{{ .Params.Image }}')" class="homepage-background-img home">
+     {{ end }}
+   {{ else }}
+   <body class="other">
+   {{ end }}
+
+
+<div class="container {{ if .IsHome }}justify-content-between{{ end }}">
+  {{ block "header" . }}
+    {{ partial "nav" . }}
   {{ end }}
 
-    <div class="container">
-      {{ block "header" . }}
-        {{ partial "nav" . }}
-      {{end}}
+    {{ block "main" . }}
+    {{ end }}
 
-      {{ block "main" . }}
-      {{ end }}
-
-      {{ partial "scripts" . }}
-    </div>
-  </body>
+    {{ partial "scripts" . }}
+  </div>
+</body>
 </html>

@@ -13,8 +13,8 @@ h1 {
 }
 
 h2 {
-  font-size: $size-80;
-  line-height: $size-80;
+  font-size: $size-128;
+  line-height: $size-136;
   font-style: italic;
   font-weight: normal;
 }
@@ -38,6 +38,12 @@ h1.post-title {
   font-size: $size-184;
   margin-top: -130px;
   line-height: $size-184;
+}
+
+h3.interview-number {
+  font-size: $size-56;
+  font-weight: 900;
+  line-height: 30px;
 }
 
 .description {
@@ -65,11 +71,9 @@ small {
   text-transform: uppercase;
 }
 
-.sidebar small {
-  font-size: $size-11;
-  letter-spacing: 8px;
-  // writing-mode: vertical-rl;
-  // text-orientation: upright;
+small.heavy {
+  font-size: $size-16;
+  font-weight: 900;
 }
 
 .diamond {

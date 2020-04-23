@@ -36,7 +36,7 @@ body.other {
   padding: 0;
 }
 
-.post-hero-image, .interview-list-image {
+.post-hero-image {
   height: 704px;
   background-size: cover !important;
   background-position: center !important;
@@ -53,8 +53,12 @@ body.other {
 
 .interview-list-image {
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  height: 704px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  display: flex;
 }
 
 .interview-number-container {

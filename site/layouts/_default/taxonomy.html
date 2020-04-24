@@ -1,24 +1,27 @@
 {{ define "main" }}
+<div class="row">
 <!-- Page that displays after clicking on a post's tag -->
-  <h1>Tagged "{{ .Data.Term }}"</h1>
-  {{range .Pages}}
+  <h3 class="mb-3"><i>Tagged in #{{ .Data.Term }}</i></h3>
+</div>
 
+{{range .Pages}}
+<div class="row">
+  <div class="col">
     <!-- Display the posts with the tag -->
-    <article>
-            <h2>
-                <a href="{{ .Permalink }}">
-                    {{ .Title }}
-                </a>
-            </h2>
-            <div>
-                <p>
-                {{ .Summary }}
-                </p>
-            </div>
-            <div class="post-footer">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-            </div>
-        </article>
-    {{ end }}
+    <a href="{{ .Permalink }}" class="text-center d-block mb-4">
+      <span class="red-decoration"></span>
+      <div style="background:url('{{ .Params.Image }}')" class="interview-list-image align-items-center">
+        <h1 class="text-red d-flex align-items-center" style="flex: 4;">{{.Title}}</h1>
 
+        <div class="d-flex align-self-end" style="flex: 1;">
+          <div class="interview-number-container mb-4 mr-4">
+            <small class="heavy text-black"><i>Issue</i></small>
+            <h3 class="interview-number"><i>{{ .Params.Interviewnumber }}</i></h3>
+          </div>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
 {{ end }}

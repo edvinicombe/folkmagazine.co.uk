@@ -1,6 +1,10 @@
 <div class="row mt-5 mb-10">
   <div class="col-lg-6 offset-lg-3 text-center mb-5">
-    <p>Tagged in <a href="#">{{ .Params.Topics }}</a>, <a href="#">#Leadership</a>, <a href="#">#Leadership</a>, <a href="#">#Leadership</a></p>
+    <ul class="topics-list">
+      {{ range .Params.topics }}
+        <li><a href="{{ $.Site.BaseURL }}topics/{{ . | urlize }}"><i>#{{ . }}</i></a></li>
+      {{ end }}
+    </ul>
   </div>
 
   <div class="col-lg-6 offset-lg-3 text-center">

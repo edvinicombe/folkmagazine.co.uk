@@ -1,24 +1,10 @@
 {{ define "main" }}
-<!-- Page that displays after clicking on a post's tag -->
-  <h1>Tagged in {{ .Data.Term }}</h1>
-  {{range .Pages}}
-
-    <!-- Display the posts with the tag -->
-    <article>
-            <h2>
-                <a href="{{ .Permalink }}">
-                    {{ .Title }}
-                </a>
-            </h2>
-            <div>
-                <p>
-                {{ .Summary }}
-                </p>
-            </div>
-            <div class="post-footer">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-            </div>
-        </article>
-    {{ end }}
-
+  <div class="row">
+  <!-- Page that displays after clicking on a post's tag -->
+    <ul class="topics-list">
+      {{range .Pages}}
+        <li class="large"><a href="{{ .Permalink }}"><i>#{{ .Title }}</i></a></li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}

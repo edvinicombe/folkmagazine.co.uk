@@ -1,10 +1,10 @@
 <div class="row mt-5 mb-10">
   <div class="col-lg-6 offset-lg-3 text-center mb-5">
-    <ul class="topics-list">
+    <div class="topics-list">
       {{ range .Params.topics }}
-        <li><a href="{{ $.Site.BaseURL }}topics/{{ . | urlize }}"><i>#{{ . }}</i></a></li>
+        <a href="{{ $.Site.BaseURL }}topics/{{ . | urlize }}"><i>#{{ . }}</i></a>
       {{ end }}
-    </ul>
+    </div>
   </div>
 
   <div class="col-lg-6 offset-lg-3 text-center">

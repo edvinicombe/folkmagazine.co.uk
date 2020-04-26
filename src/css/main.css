@@ -166,18 +166,12 @@ hr.strikethrough {
 }
 
 .topics-list {
-  display: flex;
-  justify-content: center;
 
-  > li:after {
+  > a:after {
     content: ",";
   }
 
-  > li:last-of-type {
-    margin-right: 0;
-  }
-
-  > li:last-of-type::after {
+  > a:last-of-type::after {
     content: "";
   }
 }

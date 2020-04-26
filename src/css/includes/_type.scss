@@ -38,6 +38,10 @@ h1.post-title {
   font-size: $size-184;
   margin-top: -130px;
   line-height: $size-184;
+
+  @media only screen and (max-width: 992px) {
+    margin-top: $size-40;
+  }
 }
 
 h3.interview-number {
@@ -57,6 +61,13 @@ h3.interview-number {
   margin: 0;
   line-height: 80px;
   padding-right: 3px;
+
+  @media only screen and (max-width: 991px) {
+    font-size: $size-18;
+    padding: 0;
+    line-height: $size-32;
+    float: none;
+  }
 }
 
 p {

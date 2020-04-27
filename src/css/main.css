@@ -109,10 +109,8 @@ body.other {
   }
 
   @media only screen and (max-width: 550px) {
-    display: block;
-
     > li {
-      margin-right: 0;
+      margin-right: $size-8;
     }
   }
 }

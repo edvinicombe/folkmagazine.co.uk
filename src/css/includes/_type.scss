@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: $size-184;
-  line-height: $size-128;
+  line-height: $size-136;
   font-style: italic;
   font-weight: normal;
 }
@@ -40,7 +40,7 @@ h1.post-title {
   line-height: $size-184;
 
   @media only screen and (max-width: 992px) {
-    margin-top: $size-40;
+    margin-top: -50px;
   }
 }
 
@@ -71,7 +71,7 @@ h3.interview-number {
 }
 
 p {
-  line-height: $size-32;
+  line-height: 32px;
   letter-spacing: 0.5px;
   margin: 0;
 }

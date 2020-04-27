@@ -3,8 +3,8 @@
 <div class="row">
   <div class="col">
     <span class="red-decoration"></span>
-    <div class="post-hero-image" style="background:url('{{ .Params.Image }}')">
-      <div class="interview-number-container mr-4 mb-4">
+    <div class="interview-hero" style="background:url('{{ .Params.Image }}')">
+      <div class="interview-number-container">
         <small class="heavy"><i>Issue</i></small>
         <h3 class="interview-number"><i>{{ .Params.interviewnumber }}</i></h3>
       </div>
@@ -13,12 +13,12 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-6 offset-lg-1">
+  <div class="col-6 offset-1">
     <h1 class="post-title text-red">{{.Title}}</h1>
   </div>
 </div>
 
-<div class="row mt-5 mb-5">
+<div class="row lg-mt-5 lg-mb-5 mt-2 mb-2">
   <div class="col-lg-6 offset-lg-3">
     <p class="font-weight-bold description">{{ .Description }}</p>
   </div>

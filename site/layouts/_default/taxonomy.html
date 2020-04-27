@@ -9,16 +9,7 @@
   <div class="col">
     {{range .Pages}}
     <a href="{{ .Permalink }}" class="text-center d-block mb-4">
-      <span class="red-decoration"></span>
-      <div style="background:url('{{ .Params.Image }}')" class="interview-list-image align-items-center">
-        <h1 class="text-red d-flex align-items-center" style="flex: 4;">{{.Title}}</h1>
-        <div class="d-flex align-self-end" style="flex: 1;">
-          <div class="interview-number-container mb-4 mr-4">
-            <small class="heavy text-black"><i>Issue</i></small>
-            <h3 class="interview-number"><i>{{ .Params.Interviewnumber }}</i></h3>
-          </div>
-        </div>
-      </div>
+      {{ partial "interview-hero" . }}
     </a>
     {{ end }}
   </div>

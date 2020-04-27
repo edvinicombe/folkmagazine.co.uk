@@ -1,6 +1,0 @@
-<div class="interview-number-container">
-  <small class="heavy"><i>Issue</i></small>
-  {{ range (.Paginator 1).Pages.ByPublishDate.Reverse }}
-  <h3 class="interview-number"><i>{{ .Params.interviewnumber }}</i></h3>
-  {{ end }}
-</div>

@@ -39,14 +39,27 @@ body.other {
   padding: 0;
 }
 
-.post-hero-image {
+.interview-hero {
   height: 704px;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  > .interview-number-container {
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: $size-40 $size-40 0 0;
+
+    @media only screen and (max-width: 768px) {
+      margin: $size-24 $size-24 0 0;
+    }
+  }
 
   > img {
     height: 100%;
@@ -55,20 +68,7 @@ body.other {
 
   @media only screen and (max-width: 768px) {
     height: 360px;
-  }
-}
-
-.interview-list-image {
-  flex-direction: column;
-  align-items: flex-start;
-  height: 704px;
-  background-size: cover !important;
-  background-position: center !important;
-  background-repeat: no-repeat;
-  display: flex;
-
-  @media only screen and (max-width: 768px) {
-    height: 360px;
+    padding: 0 $size-40;
   }
 }
 
@@ -101,6 +101,11 @@ body.other {
   width: 190px;
   display: block;
   margin-left: 100px;
+
+  @media only screen and (max-width: 1100px) {
+    width: 48px;
+    margin-left: 24px;
+  }
 }
 
 .flex-1 {

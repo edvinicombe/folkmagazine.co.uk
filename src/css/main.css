@@ -88,10 +88,32 @@ body.other {
 
 .menu {
   background: transparent !important;
+  display: flex;
+  justify-content: center;
+}
 
-    > li a {
+.menu-links {
+  display: flex;
+
+  > li {
+    margin-right: $size-32;
+  }
+
+  > li:last-of-type {
+    margin-right: 0;
+  }
+
+  > li a {
     text-transform: uppercase;
     font-weight: bold;
+  }
+
+  @media only screen and (max-width: 550px) {
+    display: block;
+
+    > li {
+      margin-right: 0;
+    }
   }
 }
 
@@ -117,15 +139,12 @@ body.other {
   width: $size-160;
 }
 
-.menu {
-  background-color: white;
-}
-
 .container {
   max-width: 1600px;
   display: flex;
   height: 100%;
   flex-direction: column;
+  padding: 0;
 }
 
 .row {

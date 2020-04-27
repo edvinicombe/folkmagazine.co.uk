@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col d-flex justify-content-center">
+	<div class="col">
 		<nav class="menu {{ if not .IsHome }}mb-3{{ end }}">
 			<!-- {{ if eq .Section "post" }}
 			<small class="flex-1"><b><i>Interview {{ .Params.Interviewnumber }}</i></b></small>
@@ -15,11 +15,11 @@
 						</svg>
 					</a>
 
-					<ul class="d-flex p-0 m-0 menu mt-2">
-						<li class="mr-3"><a href="/interviews/" class="{{ if .IsHome }}text-white{{ else }}text-black{{ end }}">Interviews</a></li>
-						<li class="mr-3 text-red">&#9670;</li>
-						<li class="mr-3"><a href="/topics/" class="{{ if .IsHome }}text-white{{ else }}text-black{{ end }}">Topics</a></li>
-						<li class="mr-3 text-red">&#9670;</li>
+					<ul class="p-0 m-0 mt-2 menu-links">
+						<li><a href="/interviews/" class="{{ if .IsHome }}text-white{{ else }}text-black{{ end }}">Interviews</a></li>
+						<li class="text-red">&#9670;</li>
+						<li><a href="/topics/" class="{{ if .IsHome }}text-white{{ else }}text-black{{ end }}">Topics</a></li>
+						<li class="text-red">&#9670;</li>
 						<li><a href="https://forms.gle/GzcQXU4uc7k6uS3q8" class="{{ if .IsHome }}text-white{{ else }}text-black{{ end }}" target="_blank">Subscribe</a></li>
 					</ul>
 				</div>

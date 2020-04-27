@@ -1,4 +1,4 @@
 ---
 title: "Folk Magazine"
-description: Poo
+description: Stories from inspiring designers, musicians, artists & business owners from around the world.
 ---

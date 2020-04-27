@@ -1,6 +1,6 @@
 <head>
 
-  <title>{{ if .IsHome }}{{ .Title }}{{ else }}Interview with {{ .Title }} | Folk Magazine{{ end }}</title>
+  <title>{{ if eq .Section "post" }}Interview with {{ .Title }} | Folk Magazine{{ else }}{{ .Title }} | Folk Magazine{{ end }}</title>
 
   {{ $stylesheet := .Site.Data.webpack.main }}
   {{ with $stylesheet.css }}
